@@ -1,0 +1,236 @@
+:root{
+    --mastil-ahorcado: #ce2c2c;
+    --muñeco: #00CC00;
+    --botones: #F8B537;
+    --btn-hover:#FAAD1F;
+    --pie-pagina:#808080;   
+    --enlaces-footer:#214FE5;
+    --canvas:#C3CBE5;
+    --color-palabras:#CC0000;
+    
+
+
+
+}
+
+
+body{
+    background-image: url(img/silueta-sombra.webp);
+    background-repeat:no-repeat;
+    background-size: cover;     
+
+}
+
+.logo{
+    margin-left: 35px;   
+    
+}
+.botones {
+    margin: 1rem;
+    width: 100%;
+    font-size: 1.3rem;
+    background-color:var(--botones);
+    border-top: 1px solid white;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    cursor: pointer;
+    padding: 0.8rem 1rem;
+    border-radius: 8px;
+}
+
+.botones:hover {
+    background-color:var(--btn-hover);
+    transition: 200ms;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.527);
+}
+
+/* ========== P A N T A L L A == D E == I N I C I O ========== */
+
+.contenedor {
+    position: relative;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.opciones {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/* ========== P A N T A L L A == N U E V A S == P A L A B R A S ========== */
+
+#pantalla-ingresar-palabra {
+    display: none;
+}
+
+input {
+    height: 25%;
+    width: 100%;
+    resize: none;
+    font-size: 1.5rem;
+    text-align: center;
+    border: none;
+    color: rgb(53, 34, 0);
+    margin-bottom: 10px;
+}
+
+input::placeholder {
+    color: rgb(61, 112, 189);
+}
+
+input:focus {
+    outline-style: none;
+}
+
+/* ========== P A N T A L L A == D E == J U E G O ========== */
+
+#pantalla-juego {
+    display: none;
+    position: relative;
+}
+
+.contenedor-juego {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+canvas {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background-color:var(--canvas);
+}
+
+.contenedor-palabras {
+    height: 10%;
+    width: 600px;
+    background-color: rgb(127, 162, 190);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding: 1.5rem;
+}
+.contenedor-palabras span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    color: brown;
+}
+
+
+#nueva-palabra {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.opciones-juego {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+}
+
+#letra-correcta {
+    display: none;
+}
+
+@media (max-width: 1250px) {
+    canvas {
+        height: 300px;
+        width: 400px;
+        border-radius: 5px;
+    }
+    .contenedor-palabras {
+        height: 10%;
+        width: 3%;
+        background-color: transparent;
+        padding: 1.5rem;
+    }
+    .contenedor-palabras span {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.5rem;
+        color: brown;
+    }
+    
+    .opciones-juego {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+@media (max-width: 440px) {
+    canvas {
+        height: 300px;
+        width: 300px;
+        border-radius: 5px;
+    }
+
+}
+
+
+
+/* ========== P A N T A L L A == D E == R E S U L T A D O ========== */
+
+#pantalla-resultado {
+    display: none;
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(109, 118, 132);
+}
+
+#perdiste {
+    font-size: 1.5em;
+    margin-bottom: 1.5rem;
+    color: var(--font-color);
+}
+
+.resultados {
+    display: none;
+    background-color: rgba(34, 117, 34, 0.993);
+    height: 100vh;
+    width: 100%;
+    /* display: flex; */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.resultados span{
+    font-size: 2em;
+}
+.resultados button{
+    width: auto;
+}
+
+#derrota {
+    background-color: rgba(252, 10, 10, 0.84);
+}
+
+
+/* ========== F O O T E R ========== */
+
+footer {
+    height: 100px;
+    width: 100%;
+    background-color: var(--pie-pagina);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+footer a {
+    font-size: 2.5em;
+    color: var(--enlaces-footer);
+    padding: 0 1rem;
+}

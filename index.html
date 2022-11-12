@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego del Ahorcado</title>
+    <link rel="stylesheet" href="img/Vector.png">
+    <link rel="stylesheet" href="styles.css">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+
+    <header>
+        <span class="logo"><img src="/img/Vector.png" alt="logo-alura"></span>
+    </header>
+    <main><!--inicio -->
+        <div class="contenedor" id="pantalla-inicio">
+            <div class="opciones">
+                <button class="botones" id="boton-iniciar">Empezar Juego</button>
+                <button class="botones" id="boton-nueva-palabra">Agregar nueva palabra</button>
+            </div>
+        </div>
+                    
+        <div class="contenedor" id="pantalla-ingresar-palabra">
+            <div class="opciones">
+                <input type="text" maxlength="8" name="nueva" id="input" placeholder="Ingresar palabra">
+                <span><i class='bx bxs-hand'></i> Máx. 8 carácteres y mayús. </span>
+                <button class="botones" id="boton-guardar">Guardar y empezar</button>
+                <button class="botones" id="boton-cancelar">Cancelar</button>
+            </div>
+        </div>
+
+        <div class="contenedor-juego" id="pantalla-juego">
+
+            <canvas height="600" width="600" id="canvas"></canvas>
+            <div class="contenedor-palabras" id="letras-erroneas">
+                <span id="letra-erronea"></span>
+                <span id="letra-correcta"></span>
+            </div>
+            <div class="opciones-juego">
+                <button class="botones" id="volver-jugar">Reintentar</button>
+                <button class="botones" id="desistr">Desistir</button>
+            </div>
+        </div>
+
+        <div class="contenedor" id="pantalla-resultado">
+            <div class="opciones">
+                <span id="perdiste">¡PERDISTE!</span>
+                <button class="botones" id="boton-perdiste">Volver a jugar</button>
+            </div>
+        </div>
+
+
+        <div class="resultados" id="victoria">
+            <span>GANASTE</span>
+            <button class="botones" id="boton-victoria">Volver a jugar</button>
+        </div>
+        <div class="resultados" id="derrota">
+            <span>PERDISTE</span>
+            <button class="botones" id="boton-derrota">Volver a jugar</button>
+        </div>
+
+    </main>
+
+
+    <footer>
+        <a href="#" aria-label="Linkedin" target="_blank"><i
+                class='bx bxl-linkedin-square'></i></a>
+        <span>&copy;Francisco Rey </span>
+        <a href="#" aria-label="Github" target="_blank"><i class='bx bxl-github'></i></a>
+    </footer>
+
+    <script src="juego.js"></script>
+</body>
+
+</html>
